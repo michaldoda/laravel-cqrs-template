@@ -1,1 +1,1 @@
-# laravel-cqrs
+# laravel-cqrs-template
