@@ -2,6 +2,8 @@
 
 namespace App\Infrastructure\Laravel\Providers;
 
+use App\Infrastructure\CommandBus\CommandBus;
+use App\Infrastructure\CommandBus\CommandBusInterface;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -13,7 +15,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        //
+        $this->app->bind(CommandBusInterface::class, CommandBus::class);
     }
 
     /**
